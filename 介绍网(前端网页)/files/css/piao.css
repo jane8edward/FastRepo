@@ -1,0 +1,95 @@
+.bodyer>ul>li {
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #FF6752;
+}
+
+.bodyer>ul>li:last-child {
+	border-bottom: none;
+}
+ 
+.bodyer>ul>li>.j-img {
+	width: 20%;
+	height: 100%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.bodyer>ul>li>.j-img>img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.bodyer>ul>li>.j-nr {
+	width: 78%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.bodyer>ul>li>.j-nr>h3 {
+	color: #FF6752;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.bodyer>ul>li>.j-nr>p {
+	font-size: 15px;
+	margin-top: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	word-break: break-all;
+}
+
+.bodyer>ul>li>.j-nr>.j-zt {
+	display: flex;
+	font-size: 15px;
+	margin-top: 3px;
+}
+
+.bodyer>ul>li>.j-nr>.j-xx {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bodyer>ul>li>.j-nr>.j-xx>div {
+	color: #FF6752;
+}
+
+.bodyer>ul>li>.j-nr>.j-xx>div>span {
+	color: #FF6752;
+}
+
+.bodyer>ul>li>.j-nr>.j-btn {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 8px;
+}
+
+.bodyer>ul>li>.j-nr>.j-btn>button:first-child {
+	border: 1px solid #FF6752;
+	background-color: #fff;
+	color: #FF6752;
+	border-radius: 3px;
+	padding: 0 5px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.bodyer>ul>li>.j-nr>.j-btn>button:last-child {
+	border: 1px solid #FF6752;
+	background-color: #FF6752;
+	color: #fff;
+	border-radius: 3px;
+	padding: 0 5px;
+	cursor: pointer;
+}

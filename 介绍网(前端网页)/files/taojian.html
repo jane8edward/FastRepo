@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>套件介绍</title>
+    <link rel="shortcut icon" href="./images/键盘.svg">
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/css2.css">
+</head>
+
+<body>
+    <div class="head">
+        <div class="centerbox" style="justify-content: space-between;">
+            <div class="headfirst">
+                <a href="../index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <ul class="headtwo">
+                <li><a href="index.html"><img src="./images/home.png" alt="">首页</a></li>
+                <li><a href="files/accommodstion.html"><img src="./images/content.png" alt="">键盘资讯</a></li>
+                <li><a href="files/lengzhishi.html"><img src="./images/knowledge.png" alt="">键盘冷知识</a></li>
+                <li><a href="files/liuyan.html"><img src="./images/liuyan.png" alt="">留言建议</a></li>
+                <li><a href="files/register.html"><img src="./images/login.png" alt="">登入</a></li>
+            </ul>
+            <ul class="header-top-three-ul">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="header-top-four">
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="accommodstion.html">键盘资讯</a></li>
+                <li><a href="lengzhishi.html">键盘冷知识</a></li>
+                <li><a href="liuyan.html">留言建议</a></li>
+                <li><a href="register.html">登入</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="caidan" id="caidan2">
+        <div class="centerbox">
+            <span class="caidan-span" style="font-size: 18px;">轴体介绍</span>
+            <ul class="caidan-ul">
+            </ul>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="centerbox">
+            <ul class="zslist">
+                <li class="zsitem">
+                    <a href="#">
+                        <div class="zsimg"><img src="images/shoutuo.jpg"></div>
+                        <div class="zstext">
+                            <div class="zstext-l">
+                                <h3>键盘手托</h3>
+                                <p>
+                                    键盘手托是一种垫子，可放置在键盘前方，以提供舒适的手腕支撑。它通常由柔软的材料制成，如泡沫或凝胶。它还可以保护键盘免受水、液体或其他飞溅物的损坏。
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="zsitem">
+                    <a href="#">
+                        <div class="zsimg"><img src="images/jingyindian.jpg"></div>
+                        <div class="zstext">
+                            <div class="zstext-l">
+                                <h3>静音垫</h3>
+                                <p>静音垫是一种可安装在键盘下方的橡胶垫，可以减少键盘使用时的噪音和震动。
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="zsitem">
+                    <a href="#">
+                        <div class="zsimg"><img src="images/led.jpg"></div>
+                        <div class="zstext">
+                            <div class="zstext-l">
+                                <h3>LED灯</h3>
+                                <p>一些键盘套件包括可用于照明的LED灯。这些灯可以用于在暗光环境下更好地看清键盘。
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="zsitem">
+                    <a href="#">
+                        <div class="zsimg"><img src="images/mokuai.jpg"></div>
+                        <div class="zstext">
+                            <div class="zstext-l">
+                                <h3>模块化键帽</h3>
+                                <p>模块化键帽允许用户轻松更换键帽，以适应不同的需求和个人偏好。
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="zsitem">
+                    <a href="#">
+                        <div class="zsimg"><img src="images/shubiaodian.jpg"></div>
+                        <div class="zstext">
+                            <div class="zstext-l">
+                                <h3>鼠标垫</h3>
+                                <p>有些键盘套件包括鼠标垫，使用户可以将鼠标放置在一个平滑的表面上。
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-san">
+        <div class="container">
+            <span class="footer-san-span">Copyright @ 2023-2030 QIANNIANJIANPANcom, ALL Right
+                Reserved<br>版权所有，软开213简敏宇</span>
+            <span>
+                <a class="hreff" href="#">关于我们</a>
+                <a class="hreff" href="#">联系我们</a>
+                <a href="#">商务合作</a>
+            </span>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //隔行换色
+        var item = document.querySelectorAll('.zslist>li:nth-child(even)');//js选择偶数的元素
+        for (let i = 0; i < item.length; i++) {//遍历所有选中的下标为偶数的元素背景颜色设置为灰色
+            item[i].style.cssText = "background-color: rgb(141 223 241);;"
+        }
+    </script>
+</body>
+
+</html>

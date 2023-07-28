@@ -1,0 +1,206 @@
+body {
+	background-color: #F5F5F5;
+}
+
+.header {
+	height: 80px;
+	background-color: #F5F5F5;
+	min-width: 1000px;
+}
+
+.container {
+	width: 992px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.body a {
+	font-size: 18px;
+	height: 35px;
+	line-height: 70px;
+	text-decoration: none;
+	color: #333;
+}
+
+.body a:nth-child(2) {
+	margin-left: 120px;
+}
+
+.body .body-form .tab-nav a.active {
+	border-bottom: 2px solid #5874ff;
+}
+
+.body .body-form .code {
+	display: block;
+	margin: 32px auto;
+	margin-top: 10px;
+}
+
+.header-logo {
+	height: 43px;
+	line-height: 40px;
+	padding-right: 15px;
+	border-right: solid 1px #e2e2e2;
+	margin-top: 15px;
+}
+
+.header-yi {
+	display: flex;
+}
+
+.header-logo>a,
+.header-logo img {
+	height: 100%;
+}
+
+.header-text {
+	height: 40px;
+	line-height: 40px;
+	font-size: 24px;
+	color: #333;
+	padding-left: 15px;
+}
+
+.body {
+	width: 100%;
+	height: 480px;
+	background-position: center center;
+	background: linear-gradient(to right, #3758ff, #888cf5);
+	position: relative;
+}
+
+.body-form {
+	width: 344px;
+	height: 368px;
+	background: #fff;
+	padding: 0 24px;
+	position: absolute;
+	top: 56px;
+	left: 50%;
+	margin-left: 152px;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.body-form-t {
+	line-height: 72px;
+	height: 72px;
+	border-bottom: solid 1px #e5e5e5;
+	font-size: 20px;
+	color: #333;
+	font-weight: bold;
+	margin-bottom: 32px;
+}
+
+.body-input {
+	display: flex;
+	padding-bottom: 16px;
+}
+
+.body .iconfont {
+	font-size: 17px !important;
+}
+
+.body-input>span {
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #9A9A9A;
+	background-color: #F1F1F1;
+	border: solid 1px #ddd;
+}
+
+.body-input>input {
+	width: 256px;
+	height: 40px;
+	border: solid 1px #ddd;
+	padding: 0;
+	padding: 0 15px;
+	border-left: none;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.body-wj {
+	font-size: 14px;
+	line-height: 20px;
+	margin: -3px 0 23px;
+	text-align: right;
+}
+
+.body-wj>a {
+	color: #333;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.body-btn>button {
+	width: 100%;
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	background: linear-gradient(to right, #173eff, #9b9ef7);
+	display: block;
+	cursor: pointer;
+	border: none;
+}
+
+.body-zc {
+	margin-top: 22px;
+}
+
+.body-zc .icon-you {
+	font-size: 20px;
+	margin-right: 5px;
+	margin-top: 1px;
+}
+
+.body-zc>a {
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #513728;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+}
+
+.foot {
+	font-size: 12px;
+	line-height: 24px;
+	text-align: center;
+	padding: 32px;
+	color: #999;
+}
+
+.foot>span {
+	margin: 0 6px;
+}
+
+/*移动*/
+@media screen and (max-width:750px) {
+	.body-form {
+		margin: auto;
+		width: 80%;
+		left: 10%;
+	}
+
+	.header {
+		min-width: 0;
+	}
+
+	.header>.container {
+		width: 100%;
+	}
+}
+
+/*pad*/
+@media screen and (min-width:750px) and (max-width:960px) {}

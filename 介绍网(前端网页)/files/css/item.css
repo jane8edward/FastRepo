@@ -1,0 +1,190 @@
+.bodyer>.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.bodyer .j-img {
+	width: 30%;
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	overflow: hidden;
+}
+ 
+.bodyer .j-img>img {
+	width: 80%;
+}
+
+.bodyer .j-xx {
+	width: 70%;
+}
+
+.bodyer .j-xx>.j-t {
+	display: flex;
+	align-items: center;
+	padding-top: 20px;
+}
+
+.bodyer .j-xx>.j-t>span {
+	color: #fff;
+	background-color: #FF6752;
+	padding: 0 5px;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.bodyer .j-xx>.j-t>h3 {
+	margin-left: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.bodyer .j-xx>.j-nr {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	word-break: break-all;
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+.bodyer .j-xx>.j-js {
+	display: flex;
+	margin-top: 5px;
+	border-top: 1px solid #f5f5f5;
+	padding-top: 2px;
+}
+
+.bodyer .j-xx>.j-js>div {
+	margin-right: 15px;
+	font-size: 12px;
+}
+
+.bodyer .j-xx>.j-js>div:last-child {
+	margin-right: 0;
+}
+
+.bodyer .j-xx>.j-jg {
+	background-color: #fcfaf7;
+	display: flex;
+	padding: 20px 10px;
+	margin-top: 5px;
+}
+
+.bodyer .j-xx>.j-jg>div {
+	margin-right: 20px;
+}
+
+.bodyer .j-xx>.j-jg>div:last-child {
+	margin-right: 0;
+}
+
+.bodyer .j-xx>.j-jg>div>b,
+.bodyer .j-xx>.j-jg>div>span {
+	color: #FF6752;
+}
+
+.bodyer .j-xx>.j-jg>div:first-child>b {
+	color: #999;
+}
+
+.bodyer .j-xx>.j-jg>div>del {
+	font-size: 24px;
+	font-weight: bold;
+	color: #999;
+}
+
+.bodyer .j-xx>.j-jg>div>span {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.bodyer .j-xx>.j-btn {
+	display: flex;
+	margin-top: 10px;
+	align-items: center;
+}
+
+.bodyer .j-xx>.j-btn>button {
+	padding: 0 5px;
+	border: 1px solid #FF6752;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.bodyer .j-xx>.j-btn>button:first-of-type {
+	color: #FF6752;
+	background-color: #fff;
+	margin-right: 15px;
+}
+
+.bodyer .j-xx>.j-btn>button:last-of-type {
+	color: #fff;
+	background-color: #FF6752;
+}
+
+.bodyer .j-xx>.j-btn>div:first-child {
+	margin-right: 15px;
+}
+
+.bodyer .j-xx>.j-btn>div>input {
+	width: 20px;
+	border: none;
+	text-align: center;
+}
+
+.bodyer .j-xx>.j-btn>div>span {
+	padding: 0 5px;
+}
+
+.bodyer .j-xx>.j-btn>div>span:first-of-type {
+	background-color: #FF6752;
+	color: #fff;
+}
+
+.bodyer .j-xx>.j-btn>div>span:last-of-type {
+	background-color: #FF6752;
+	color: #fff;
+}
+
+.bodyer .j-xx>.j-ps {
+	display: flex;
+	align-items: center;
+	margin-top: 8px;
+}
+
+.bodyer .j-xx>.j-ps>div {
+	font-size: 14px;
+	width: 60px;
+	display: flex;
+	justify-content: space-between;
+	margin-right: 15px;
+}
+
+.bodyer .j-xx>.j-ps>input {
+	border: 1px solid #ccc;
+	width: 400px;
+	box-sizing: border-box;
+	padding-left: 5px;
+}
+
+.bodyer .j-xx>.j-fw {
+	display: flex;
+	margin-top: 8px;
+	align-items: auto;
+}
+
+.bodyer .j-xx>.j-fw>div {
+	font-size: 14px;
+	width: 60px;
+	display: flex;
+	justify-content: space-between;
+	margin-right: 15px;
+}
+
+.bodyer .j-xx>.j-fw>p {
+	font-size: 14px;
+}

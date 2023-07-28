@@ -1,0 +1,326 @@
+* {
+	color: #4d4d4d;
+}
+
+body {
+	margin: 0;
+}
+
+input,
+textarea {
+	padding: 0;
+	margin: 0;
+	background: none;
+	outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	font-weight: 500;
+}
+
+ul,
+ol,
+dl,
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+button {
+	padding: 0;
+	margin: 0;
+}
+
+
+.header {
+	height: 80px;
+	/* background: linear-gradient(to right, #173eff, #9b9ef7); */
+	min-width: 1000px;
+}
+
+.container {
+	width: 1200px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-logo {
+	height: 43px;
+	line-height: 40px;
+	padding-right: 15px;
+	border-right: solid 1px #e2e2e2;
+}
+
+.header-yi {
+	display: flex;
+}
+
+.header-logo>a,
+.header-logo img {
+	height: 100%;
+}
+
+.header-text {
+	height: 40px;
+	line-height: 40px;
+	font-size: 24px;
+	color: #fff;
+	padding-left: 15px;
+}
+
+.foot {
+	font-size: 12px;
+	line-height: 24px;
+	text-align: center;
+	padding: 32px;
+	color: #999;
+}
+
+.foot>span {
+	margin: 0 6px;
+}
+
+.header-er {
+	color: #fff;
+	background: linear-gradient(to right, #173eff, #9b9ef7);
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.header-er>a {
+	color: #fff;
+	margin-left: 5px;
+}
+
+.body {
+	width: 992px;
+	margin: auto;
+}
+
+.body>.container {
+	height: 351px;
+	margin: 40px auto;
+	padding: 45px 0 0 75px;
+	width: 800px;
+	background: #fff;
+	box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 10%);
+	display: block;
+	box-sizing: border-box;
+}
+
+.body-input {
+	display: flex;
+	margin-bottom: 16px;
+}
+
+.body-input>span {
+	line-height: 32px;
+	width: 180px;
+	height: 30px;
+	overflow: hidden;
+	text-align: right;
+	font-size: 14px;
+	color: #666;
+	padding-right: 8px;
+}
+
+.body-input>input {
+	width: 288px;
+	height: 32px;
+	line-height: 20px;
+	font-size: 14px;
+	padding: 0px 8px;
+	border: solid 1px #ddd;
+}
+
+.body-input-bg>input {
+	/* background: url(../images/keyboard.png) no-repeat 282px center; */
+	padding-right: 30px;
+	width: 265px;
+}
+
+.body-input-yz>input {
+	width: 123px;
+}
+
+.body-input-yz>img {
+	border: none;
+	vertical-align: middle;
+}
+
+.body-input-yz-huan {
+	display: initial !important;
+	width: auto !important;
+}
+
+.body-input-yz-huan>a {
+	color: #999;
+}
+
+.body-btn {
+	margin-top: 24px;
+}
+
+.body-btn>button {
+	width: 80px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	background: #513728;
+	color: #fff;
+	font-size: 14px;
+	display: block;
+	margin-left: 189px;
+	cursor: pointer;
+	border: none;
+}
+
+.foot {
+	border-top: solid 1px #ddd;
+	font-size: 16px;
+}
+
+/*移动*/
+@media screen and (max-width:750px) {
+	.body>.container {
+		width: 90%;
+		padding-left: 0;
+	}
+
+	.container,
+	.header,
+	.body {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.header>.container {
+		flex-wrap: wrap;
+	}
+}
+
+/*pad*/
+@media screen and (min-width:750px) and (max-width:960px) {}
+
+.zhuce-wrapper {
+	background: #f5f5f5;
+	line-height: 1.4;
+}
+
+.body {
+	background: #f5f5f5;
+	line-height: 1.4;
+	width: 1240px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.body h3 {
+	font-size: 26px;
+	font-weight: normal;
+	color: #999999;
+	padding-left: 50px;
+	height: 180px;
+	line-height: 180px;
+}
+
+.zhuce-form {
+	padding-left: 460px;
+}
+
+.zhuce-form .zhuce-form-item {
+	position: relative;
+	padding-bottom: 24px;
+}
+
+.zhuce-form .zhuce-form-item .msg {
+	color: #ff4d4f;
+	position: absolute;
+	left: 2px;
+	bottom: 2px;
+}
+
+
+.zhuce-form .zhuce-form-item.pl50 {
+	padding-left: 40px;
+	cursor: pointer;
+}
+
+.zhuce-form .zhuce-form-item span.iconfont {
+	position: absolute;
+	left: 15px;
+	top: 13px;
+	color: #666;
+	font-size: 18px;
+}
+
+.zhuce-form .zhuce-form-item i {
+	color: #1b31fb;
+	font-size: 14px;
+}
+
+.zhuce-form .zhuce-form-item input {
+	width: 300px;
+	height: 50px;
+	border: 1px solid #e4e4e4;
+	padding-left: 40px;
+}
+
+.zhuce-form .zhuce-form-item.error input {
+	border-color: #ff4d4f;
+}
+
+.zhuce-form .zhuce-form-item input::placeholder {
+	color: #cccccc !important;
+}
+
+.zhuce-form .zhuce-form-item .submit {
+	width: 300px;
+	height: 50px;
+	background: linear-gradient(to right, #173eff, #9b9ef7);
+	border-radius: 4px;
+	display: block;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+.zhuce-form .zhuce-form-item .code {
+	position: absolute;
+	left: 190px;
+	top: 16px;
+	width: 120px;
+	color: #1b31fb;
+	text-align: right;
+	font-size: 14px;
+}
+
+.zhuce-form .zhuce-form-item .code.ing {
+	color: #cccccc;
+}
+
+.body .zhuce-form .gou {
+	width: auto;
+	height: auto;
+}

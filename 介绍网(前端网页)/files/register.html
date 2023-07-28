@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>注册登录</title>
+</head>
+<style>
+  * {
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  body {
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 弹性布局 水平+垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 渐变背景 */
+    background: linear-gradient(200deg, #b2fefa, #e3eeff);
+  }
+  .container {
+    background-color: #fff;
+    width: 650px;
+    height: 415px;
+    border-radius: 5px;
+    /* 阴影 */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    /* 相对定位 */
+    position: relative;
+  }
+  .form-box {
+    /* 绝对定位 */
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    background-color: #7adac8;
+    width: 320px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    /* 动画过渡 加速后减速 */
+    transition: 0.5s ease-in-out;
+  }
+  .register-box,
+  .login-box {
+    /* 弹性布局 垂直排列 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .hidden {
+    display: none;
+    transition: 0.5s;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    /* 大写 */
+    text-transform: uppercase;
+    color: #fff;
+    /* 字间距 */
+    letter-spacing: 5px;
+  }
+  input {
+    background-color: transparent;
+    width: 70%;
+    color: #fff;
+    border: none;
+    /* 下边框样式 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 0;
+    text-indent: 10px;
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  input::placeholder {
+    color: #fff;
+  }
+  input:focus {
+    color: #62ad9d;
+    outline: none;
+    border-bottom: 1px solid #47807380;
+    transition: 0.5s;
+  }
+  input:focus::placeholder {
+    opacity: 0;
+  }
+  .form-box button {
+    width: 70%;
+    margin-top: 35px;
+    background-color: #f6f6f6;
+    outline: none;
+    border-radius: 8px;
+    padding: 13px;
+    color: #1d967d;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+  }
+  .form-box button:hover {
+    background-color: #009c85;
+    color: #f6f6f6;
+    transition: background-color 0.5s ease;
+  }
+  .con-box {
+    width: 50%;
+    /* 弹性布局 垂直排列 居中 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 绝对定位 居中 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .con-box.left {
+    left: -2%;
+  }
+  .con-box.right {
+    right: -2%;
+  }
+  .con-box h2 {
+    color: #8e9aaf;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .con-box p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #8e9aaf;
+    text-align: center;
+  }
+  .con-box span {
+    color: #48dfbb;
+  }
+  .con-box img {
+    width: 150px;
+    height: 150px;
+    opacity: 0.9;
+    margin: 40px 0;
+  }
+  .con-box button {
+    margin-top: 3%;
+    background-color: #fff;
+    color: #1d967d;
+    border: 1px solid #d3b7d8;
+    padding: 6px 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+  }
+  .con-box button:hover {
+    background-color: #7adac8;
+    color: #fff;
+  }
+  .msg {
+    color: #d80303;
+  }
+  .centerbox {
+    width: 55%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+  .head {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    border-bottom: 1px solid rgb(239, 239, 239);
+  }
+  .headtwo {
+    width: 55%;
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .headtwo>li>a>img {
+    width: 24px;
+    height: 24px;
+    vertical-align: sub;
+  }
+  .headfirst {
+    width: 20%;
+  }
+  .headfirst>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .headfirst>a>img {
+    /* width: 125px; */
+    height: 55px;
+    /* margin-top: 12px; */
+  }
+  .headfirst>a>img:hover {
+    transform: scale(1.2);
+  }
+  .headtwo {
+    width: 55%;
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .headtwo>li>a {
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .headtwo>li>a:hover {
+    color: #ff00ff;
+  }
+</style>
+<body>
+  <div class="head">
+    <div class="centerbox" style="justify-content: space-between;">
+      <div class="headfirst">
+        <a href="../index.html"><img src="./images/logo.png" alt=""></a>
+      </div>
+      <ul class="headtwo">
+        <li><a href="../index.html"><img src="./images/home.png" alt="">首页</a></li>
+        <li><a href="./accommodstion.html"><img src="./images/content.png" alt="">键盘资讯</a></li>
+        <li><a href="./lengzhishi.html"><img src="./images/knowledge.png" alt="">键盘冷知识</a></li>
+        <li><a href="./liuyan.html"><img src="./images/liuyan.png" alt="">留言建议</a></li>
+      </ul>
+      <ul class="header-top-three-ul">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="form-box">
+      <!-- 注册 -->
+      <div class="register-box hidden">
+        <h1>register</h1>
+        <input name="username" placeholder="用户名">
+        <span class="msg"></span>
+        <input name="phone" placeholder="电话">
+        <span class="msg"></span>
+        <input name="password" placeholder="密码">
+        <span class="msg"></span>
+        <input name="confirm" placeholder="确认密码">
+        <span class="msg"></span>
+        <button class="submit">注册</button>
+      </div>
+      <!-- 登录 -->
+      <div class="login-box">
+        <h1>login</h1>
+        <input name="username" placeholder="用户名">
+        <span class="msg"></span>
+        <input name="password" placeholder="密码">
+        <span class="msg"></span>
+        <button>登录</button>
+      </div>
+    </div>
+    <div class="con-box left">
+      <h2>欢迎来到<span>键盘之家</span></h2>
+      <p>快来物色你中意的<span>键盘</span>吧</p>
+      <img src="../images/键盘.png" alt="">
+      <p>已有账号</p>
+      <button id="login">去登录</button>
+    </div>
+    <div class="con-box right">
+      <h2>欢迎来到<span>键盘之家</span></h2>
+      <p>快来物色你中意的<span>键盘</span>吧</p>
+      <img src="../images/键盘2.png" alt="">
+      <p>没有账号？</p>
+      <button id="register">去注册</button>
+    </div>
+  </div>
+  <script>
+    // 要操作到的元素
+    let login = document.getElementById('login');
+    let register = document.getElementById('register');
+    let form_box = document.getElementsByClassName('form-box')[0];
+    let register_box = document.getElementsByClassName('register-box')[0];
+    let login_box = document.getElementsByClassName('login-box')[0];
+    // 去注册按钮点击事件
+    register.addEventListener('click', () => {
+      form_box.style.transform = 'translateX(80%)';
+      login_box.classList.add('hidden');
+      register_box.classList.remove('hidden');
+    })
+    // 去登录按钮点击事件
+    login.addEventListener('click', () => {
+      form_box.style.transform = 'translateX(0%)';
+      register_box.classList.add('hidden');
+      login_box.classList.remove('hidden');
+    })
+    // 1. 用户名验证  
+    const username = document.querySelector('[name=username]')
+    // 值发生变化时
+    username.addEventListener('change', verifyname)
+    // 封装函数
+    function verifyname() {
+      const span = username.nextElementSibling
+      // 正则
+      const reg = /^[a-zA-Z0-9-_]{6,16}$/
+      // 昵称不合法
+      if (!reg.test(username.value)) {
+        span.innerText = '用户名输入不合法，请输入6-16位'
+        return false
+      }
+      // n昵称合法
+      span.innerText = ''
+      return true
+    }
+    // 2. 手机号验证  
+    const phone = document.querySelector('[name=phone]')
+    // 值发生变化时
+    phone.addEventListener('change', verifyPhone)
+    // 封装函数
+    function verifyPhone() {
+      const span = phone.nextElementSibling
+      // 正则
+      const reg = /^1(3\d|4[5-9]|5[0-35-9]|6[567]|7[0-8]|8\d|9[0-35-9])\d{8}$/
+      // 手机号不合法
+      if (!reg.test(phone.value)) {
+        // console.log('请输入正确的11位手机号');
+        span.innerText = '请输入正确的11位手机号'
+        return false
+      }
+      // 手机号合法
+      span.innerText = ''
+      return true
+    }
+    // 3. 密码验证  
+    const password = document.querySelector('[name=password]')
+    // 值发生变化时
+    password.addEventListener('change', verifyPassword)
+    // 封装函数
+    function verifyPassword() {
+      const span = password.nextElementSibling
+      // 正则
+      const reg = /^[a-zA-Z0-9-_]{6,20}$/
+      // 密码不合法
+      if (!reg.test(password.value)) {
+        span.innerText = '请输入6-20位密码'
+        return false
+      }
+      // 密码合法
+      span.innerText = ''
+      return true
+    }
+    // 4. 密码再次验证  
+    const confirm = document.querySelector('[name=confirm]')
+    // 值发生变化时
+    confirm.addEventListener('change', verifyConfirm)
+    // 封装函数
+    function verifyConfirm() {
+      const span = confirm.nextElementSibling
+      // 密码不一致
+      if (confirm.value !== password.value) {
+        span.innerText = '两次密码输入不一致'
+        return false
+      }
+      span.innerText = ''
+      return true
+    }
+    const gou = document.querySelector('.gou')
+    const submit = document.querySelector('.submit')
+    submit.addEventListener('click', function (e) {
+      if (verifyname() && verifyPhone() && verifyPassword() && verifyConfirm()) {
+        let num = 5
+        submit.innerHTML = `注册成功<br><span style="color:#033f3c">${num}</span>秒钟之后跳转到首页`
+        let timeId = setInterval(function () {
+          num--
+          submit.innerHTML = `注册成功<br><span style="color:#033f3c">${num}</span>秒钟之后跳转到首页`
+          if (num === 0) {
+            clearInterval(timeId)
+            location.href = '../index.html'
+          }
+          // 如果num === 0 则停止定时器，并且完成跳转功能
+          // 4. 跳转  location.href
+        }, 1000)
+      } else {
+        submit.innerHTML = `注册成功<br><span style="color:#033f3c">${num}</span>秒钟之后跳转到首页`
+      }
+    })
+  </script>
+</body>
+</html>
